@@ -14,62 +14,54 @@
 
 <form action="#" th:action="@{/plotmatakuliah/view}" th:object="${plotmatakuliah}" method="post">
 
-<label for="username" class="form-label">Mahasiswa</label>
-<div class="mb-3">
-<select id="multiSelectElementsSelected"
-            name="multiSelectElementsSelected"
-            multiple="multiple"
-			th:field="*{mahasiswa}">
-		
-        <option th:each="mahasiswa,row : ${listMahasiswa}"
-                th:value="${mahasiswa.idMahasiswa}"  
-                th:text="${mahasiswa.namaMahasiswa}"></option>
-</select>
-</div>
 
-<label for="username" class="form-label">Dosen</label>
+ 
+                  
+                  
 <div class="mb-3">
-<select id="multiSelectElementsSelected"
-            name="multiSelectElementsSelected"
-            multiple="multiple"
-            th:field="*{dosen}">
-		
-        <option th:each="dosen,row : ${listDosen}"
-                th:value="${dosen.idDosen}" 
-                 th:text="${dosen.namaDosen}"></option>
-</select>
-</div>
-
-<label for="username" class="form-label">Matakuliah</label>
-<div class="mb-3">
-<select id="multiSelectElementsSelected"
-            name="multiSelectElementsSelected"
-            multiple="multiple"
-            th:field="*{matakuliah}">
-		
-        <option th:each="matakuliah,row : ${listMataKuliah}"
-                th:value="${matakuliah.idMataKuliah}"  
-                th:text="${matakuliah.namaMataKuliah}"></option>
+  <label for="nama" class="form-label">MataKuliah</label>
+ <select th:field="*{matakuliah}">
+                         <option value=""> -- </option>
+                         <option th:each="matakuliah : ${listMataKuliah}"
+                            th:value="${matakuliah.idMataKuliah}"
+                            th:utext="${matakuliah.namaMataKuliah}"/>
 </select>
 </div>
 
 <div class="mb-3">
-<label for="username" class="form-label">Soal</label>
+  <label for="mahasiswa" class="form-label">Mahasiswa</label>
+ <select th:field="*{mahasiswa}">
+                         <option value=""> -- </option>
+                         <option th:each="mahasiswa : ${listMahasiswa}"
+                            th:value="${mahasiswa.idMahasiswa}"
+                            th:utext="${mahasiswa.namaMahasiswa}"/>
+</select>
 </div>
+
 <div class="mb-3">
+  <label for="dosen" class="form-label">Dosen</label>
+ <select th:field="*{dosen}">
+                         <option value=""> -- </option>
+                         <option th:each="dosens : ${listDosen}"
+                            th:value="${dosens.idDosen}"
+                            th:utext="${dosens.namaDosen}"/>
+</select>
+</div>
+
+<div class="mb-3">
+
 <select id="multiSelectElementsSelected"
             name="multiSelectElementsSelected"
             multiple="multiple"
-            th:field="*{soal}">
-		
+            th:field="*{lstSoal}">
+
         <option th:each="soal,row : ${listSoal}"
                 th:value="${soal.id}"
                 th:text="${soal.namaSoal}"></option>
 </select>
 </div>
-
-
-
+<div class="mb-3">
+<input type="hidden" th:field="*{idPlotMataKuliah}">
 
  <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" />
 </form>

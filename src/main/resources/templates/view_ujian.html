@@ -13,19 +13,20 @@
 
 
 
-<form action="#" th:action="@{/ujian/view}" th:object="${mahasiswa}" method="post">
+<form action="#" th:action="@{/ujian/view}" th:object="${plotmatakuliah}" method="post">
 
  <label>Model</label>
-            <div th:each="pertanyaan : $pertanyaan1}">
+            <div th:each="listPertanyaan : $listPertanyaan}">
                 <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" th:field="*{pertanyaan}" th:value="${pertanyaan}" class="custom-control-input">
-                    <label class="custom-control-label"  th:text="${pertanyaan}">model</label>
+                    <input type="radio" th:field="*{pertanyaan}" th:value="${listpertanyaan.pertanyaan}" class="custom-control-input">
+                    <label class="custom-control-label"  th:text="${listpertanyaan.pertanyaan}">model</label>
                 </div>
             </div>
 
 
  <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" />
 </form>
+<input type="hidden" th:field="*{idPlotMataKuliah}">
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 </body>

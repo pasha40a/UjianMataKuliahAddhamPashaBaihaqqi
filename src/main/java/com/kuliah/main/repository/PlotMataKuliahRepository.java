@@ -6,5 +6,5 @@ import com.kuliah.main.entity.PlotMataKuliah;
 import com.kuliah.main.entity.Soal;
 
 public interface PlotMataKuliahRepository extends CrudRepository<PlotMataKuliah, Long> {
-	public PlotMataKuliah findByIdPlotMataKuliah(long id);
+	
 }

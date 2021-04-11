@@ -40,7 +40,7 @@ public class MataKuliahApplication implements CommandLineRunner{
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
 		
-	/*PlotMataKuliah plotMK = new PlotMataKuliah();
+	/*	PlotMataKuliah plotMK = new PlotMataKuliah();
 		
 		
 		Mahasiswa mahasiswa = new Mahasiswa();
@@ -72,7 +72,7 @@ public class MataKuliahApplication implements CommandLineRunner{
 		soal1.setNilai(nilai);
 		
 		Pertanyaan pertanyaan1 = new Pertanyaan();
-		pertanyaan1.setPertanyaan1("Siapa Dewa Kipas");
+		pertanyaan1.setPertanyaan("Siapa Dewa Kipas");
 		pertanyaan1.setJawaban1("Sidiq");
 		pertanyaan1.setJawaban2("Dadang");
 		pertanyaan1.setJawaban3("Jouzu");
@@ -90,14 +90,14 @@ public class MataKuliahApplication implements CommandLineRunner{
 		
 		plotMK.setLstSoal(lstSoal);
 		this.plotMK.save(plotMK);
-		*/
-//		
-//		Soal soalx = this.soalRepo.findByNamaSoal("Soal Percintaan");
-//		
-//		System.out.println(soalx.getNamaSoal());
-//		
 		
-		/*Pertanyaan pertanyaan1 = new Pertanyaan();
+		
+		Soal soalx = this.soalRepo.findByNamaSoal("Soal Percintaan");
+		
+		System.out.println(soalx.getNamaSoal());
+		
+		*/
+	/*	Pertanyaan pertanyaan1 = new Pertanyaan();
 		pertanyaan1.setPertanyaan("Siapa Dewabrata");
 		pertanyaan1.setJawaban1("Trainer");
 		pertanyaan1.setJawaban2("Artis");
@@ -108,7 +108,6 @@ public class MataKuliahApplication implements CommandLineRunner{
 
 		this.pertanyaanRepo.save(pertanyaan1);
 		*/
-		
 	}
 
 }

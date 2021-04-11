@@ -37,9 +37,6 @@ public class PlotMataKuliah {
 	 @OneToOne(cascade=CascadeType.ALL)
 	 @JoinColumn(name="id_mahasiswa")
 	private Mahasiswa mahasiswa;
-	 @OneToOne(cascade=CascadeType.ALL)
-	 @JoinColumn(name="id_soal")
-	private Soal soal;
 	
 	
 	 @OneToMany(cascade = CascadeType.ALL)
